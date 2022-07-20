@@ -1,0 +1,668 @@
+:root {
+	--red: #DA291C;
+	--red-gradient: background: linear-gradient(24.36deg, #DA291C 13.17%, #A51414 96.1%);
+	--teal: #009CA6;
+	--black: #222221;
+	--grey: #999999;
+	--dark-grey: #4A4F53;
+	--light-grey: #F3F3F3;
+	--plum: #9A3324;
+	--biscuit: #D1CCBD;
+	--green: #45B383;
+	--mustard: #F2A900;
+	--orange: #FD673E;
+	--pink: #F6B0BD;
+	--purple: #AE90C3;
+	--primary-font: 'Oswald', sans-serif;
+	--secondary-font: 'Lato', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body.background-biscuit {background: var(--biscuit);}
+body.background-teal {background: var(--teal);}
+body.background-red {background: var(--red);}
+body.background-red_gradient {background: var(--red-gradient);}
+body.background-green {background: var(--green);}
+body.background-pink {background: var(--pink);}
+body.background-plum {background: var(--plum);}
+body.background-purple {background: var(--purple);}
+body.background-mustard {background: var(--mustard);}
+body.background-orange {background: var(--orange);}
+
+section.at-inner p, span, label {
+	color: var(--black);
+	font-family: var(--secondary-font);
+}
+
+/* Header */
+
+header.theme-header {
+	align-items: center;
+	background: var(--light-grey);
+	display: flex;
+	height: 105px;
+	justify-content: center;
+}
+
+figure.branding {
+  padding: 20px 0 10px;
+}
+
+figure.branding img {
+	width: 260px;
+}
+
+/* Top of Form */
+
+section.at-inner header.at-title {
+	font-family: var(--primary-font);
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 37px;
+	padding: 24px 20px 4px;
+	text-align: left;
+}
+
+section.at-inner header.at-markup.HeaderHtml {
+	font-size: 16px;
+	margin: 0;
+	padding: 0 20px 24px;
+}
+
+/* Fast Action */
+
+section.at-inner .at-markup.FastAction .fastAction {
+	background: var(--light-grey);
+	padding: 8px 20px;
+}
+
+/* Legends */
+
+section.at-inner legend.at-legend {
+	color: var(--dark-grey);
+	font-family: var(--primary-font);
+	font-size: 18px;
+	font-weight: 500;
+	padding: 20px 0 6px;
+	text-transform: uppercase;
+}
+
+/* Checkboxes */
+
+label.at-check {margin:5px 5px 5px 10px;}
+
+.at-check.YesSignMeUpForUpdatesForBinder {position:relative;}
+
+.at-markup.UpdateMyProfile {margin:0 5px;}
+.PaymentInformation .at-markup.UpdateMyProfile {margin:0 10px 5px;}
+.updateMyProfileSection > label {margin:0;}
+
+article .at.ngp-form label.at-check .at-checkbox-title-container:before,
+article .at.ngp-form label.at-check .at-checkbox-title-container:after,
+article .at.ngp-form .UpdateMyProfile label > span:before,
+article .at.ngp-form .UpdateMyProfile label > span:after,
+article .at.ngp-form label.at-check.authorize-payment-label > span:before,
+article .at.ngp-form label.at-check.authorize-payment-label > span:after {
+  border:1px solid var(--dark-grey);
+  border-radius:6px;
+  height:24px;
+  left:0;
+  top:0;
+  width:24px;
+}
+
+article .at.ngp-form label.at-check .at-checkbox-title-container:before,
+article .at.ngp-form .UpdateMyProfile label > span:before,
+article .at.ngp-form label.at-check.authorize-payment-label > span:before {background:none;}
+
+article .at.ngp-form label.at-check .at-checkbox-title-container:after,
+article .at.ngp-form .UpdateMyProfile label > span:after,
+article .at.ngp-form label.at-check.authorize-payment-label > span:after {
+  background-color:var(--red);
+  background-image:url(/themes/custom/abby/css/OA/images/check-mark.svg);
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:16px 16px;
+  border:1px solid var(--red);
+  content:"";
+  font-size:24px;
+  line-height:24px;
+  text-align:center;
+}
+
+article .at.ngp-form label.at-check .at-checkbox-title-container,
+article .at.ngp-form .UpdateMyProfile label > span,
+article .at.ngp-form fieldset.ContributionInformation label.at-select.SelectedFrequency span.at-select,
+article .at.ngp-form label.at-check.authorize-payment-label > span {
+  display:block;
+  font-size:16px;
+  line-height:24px;
+  margin:0;
+  /* margin-top: 8px; */
+  padding-left:34px;
+  text-transform:none;
+}
+
+fieldset.ContributionInformation label.at-select.SelectedFrequency span.at-select {padding-left:0;}
+
+article .at.ngp-form label.at-check .at-checkbox-title,
+article .at.ngp-form label.at-check .at-cover-costs-info,
+article .at.ngp-form label.at-select .select-collapse,
+article .at.ngp-form .UpdateMyProfile label > span {
+  font-weight:400;
+  line-height:24px;
+}
+
+/* Radio Buttons + Toggle */
+
+fieldset.ContributionInformation .at-radios {
+  display:flex;
+  flex-wrap:wrap;
+  margin:0;
+}
+
+label.label-amount input[type="radio"]:checked+a {
+  background-color: var(--red) !important;
+  border-color: var(--red) !important;
+}
+
+article .at.ngp-form .radios label input[type="radio"] {
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  border:1px solid var(--dark-grey);
+  border-radius:50% !important;
+  content:"";
+  display:block;
+  height:24px;
+  left:0;
+  margin:0;
+  padding:0;
+  outline:none;
+  position:absolute;
+  width:24px;
+  cursor: pointer;
+}
+
+article .at.ngp-form .radios label input[type="radio"]:checked {
+  background:var(--red);
+  border:0;
+}
+
+article .at.ngp-form .form-item-selectedfrequency .radios {
+  display:flex;
+  flex-wrap:wrap;
+  margin:0;
+}
+
+article .at.ngp-form.multistep-layout .form-item-selectedfrequency .radios {margin:10px 0 0;}
+
+article .at.ngp-form .form-item-selectedfrequency .radios label {
+  color: var(--black);
+  display:block;
+  font-family: var(--secondary-font);
+  font-size:16px;
+  line-height:20px;
+  height:30px;
+  margin:0 0 10px 10px;
+  padding:5px 10px 5px 34px;
+  position:relative;
+  text-decoration:none;
+}
+
+article .at.ngp-form .form-item-selectedfrequency .radio-description{
+  color: var(--black);
+  display:block;
+  font-family: var(--secondary-font);
+  font-size:16px;
+  line-height:20px;
+  margin:15px 10px 16px;
+  padding:0;
+  width:100%;
+}
+
+/* Contribution Buttons */
+
+section.at-inner input[type="text"], 
+section.at-inner input[type="password"], 
+section.at-inner input[type="date"], 
+section.at-inner input[type="datetime"], 
+section.at-inner input[type="datetime-local"], 
+section.at-inner input[type="month"], 
+section.at-inner input[type="week"], 
+section.at-inner input[type="email"], 
+section.at-inner input[type="number"], 
+section.at-inner input[type="search"], 
+section.at-inner input[type="tel"], 
+section.at-inner input[type="time"], 
+section.at-inner input[type="url"], 
+section.at-inner input[type="color"], 
+section.at-inner select,
+section.at-inner textarea,
+section.at-inner input[type="text"]::placeholder, 
+section.at-inner input[type="password"]::placeholder, 
+section.at-inner input[type="date"]::placeholder, 
+section.at-inner input[type="datetime"]::placeholder, 
+section.at-inner input[type="datetime-local"]::placeholder, 
+section.at-inner input[type="month"]::placeholder, 
+section.at-inner input[type="week"]::placeholder, 
+section.at-inner input[type="email"]::placeholder, 
+section.at-inner input[type="number"]::placeholder, 
+section.at-inner input[type="search"]::placeholder,
+section.at-inner input[type="tel"]::placeholder, 
+section.at-inner input[type="time"]::placeholder, 
+section.at-inner input[type="url"]::placeholder, 
+section.at-inner input[type="color"]::placeholder, 
+section.at-inner textarea::placeholder{
+	border-color: var(--dark-grey);
+	color: var(--black) !important;
+	font-family: var(--secondary-font);
+	font-size: 16px;
+}
+
+fieldset.ContributionInformation label.label-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:6px;
+  color:#fff !important;
+  float:none;
+  font-size:24px !important;
+  font-weight:900;
+  height:50px;
+  letter-spacing:unset;
+  line-height:30px;
+  /* margin:5px; */
+  padding:12px 20px;
+  text-shadow:unset;
+  width: 100% !important;
+  font-family: var(--primary-font);
+}
+
+/* fieldset.ContributionInformation .form-item-selectamount {margin:0;} */
+
+fieldset.ContributionInformation label.label-amount input[name="SelectAmount"] {
+  height:0 !important;
+  left:0;
+  position:absolute;
+  top:0;
+  width:1px !important;
+}
+
+fieldset.ContributionInformation label.label-amount a,
+fieldset.ContributionInformation label.label-amount a:hover,
+fieldset.ContributionInformation label.label-amount:hover a {
+  background: var(--dark-grey) !important;
+  border:0;
+  border-radius:6px;
+  height:50px;
+}
+
+fieldset.ContributionInformation label.label-amount a:hover {
+  background-color:var(--red) !important;
+}
+
+fieldset.ContributionInformation label.label-amount input:checked + a {
+  background-color:var(--red) !important;
+  color:#fff;
+}
+
+fieldset.ContributionInformation label.label-amount:active a {box-shadow:none;}
+
+fieldset.ContributionInformation label.label-otheramount {
+  background:transparent;
+  color: var(--dark-grey);
+  font-size:0;
+  height:auto;
+  line-height:50px;
+  margin-bottom:18px;
+  padding:0;
+  position:relative;
+}
+
+fieldset.ContributionInformation .at-radios.recurring-options label.label-otheramount:after {
+   content:"";
+   font-size:0;
+}
+
+fieldset.ContributionInformation input.edit-otheramount,
+fieldset.ContributionInformation input.edit-otheramount:required::selection {
+  background:none;
+  border:1px solid var(--grey);
+  border-radius:6px;
+  color: var(--dark-grey);
+  font-family:var(--primary-font);
+  font-size:24px;
+  font-weight:900;
+  height:50px;
+  letter-spacing:unset;
+  line-height:50px;
+  margin:0;
+  padding:0 20px 0 25px;
+  position:absolute;
+  top:0;
+  width:100%;
+}
+
+fieldset.ContributionInformation input.edit-otheramount::placeholder {
+  color:var(--dark-grey);
+  font-size:24px;
+  font-weight:900;
+  }
+
+fieldset.ContributionInformation input:checked + input.edit-otheramount {
+  background: none;
+  border-color:var(--grey);
+  color:var(--dark-grey);
+  font-weight: 700;
+  padding:0 20px 0 25px;
+}
+
+fieldset.ContributionInformation input:checked + input.edit-otheramount::placeholder {color:#fff;}
+
+fieldset.ContributionInformation label.label-otheramount span,
+fieldset.ContributionInformation input.edit-otheramount:required + span {
+  border:0;
+  color: var(--dark-grey);
+  display:block;
+  font-size:24px;
+  height:50px;
+  line-height:50px;
+  padding:0 0 0 12px;
+}
+
+fieldset.ContributionInformation input.edit-otheramount:required + span {
+  color: var(--red);
+  font-weight:900;
+}
+
+.at form .label-amount input+.label-otheramount-prefix {
+  color: var(--dark-grey) !important;
+}
+
+.at-form-submit {padding:10px 20px 0;}
+
+.at-form-submit {padding:10px 20px;}
+
+/* Inputs and Labels */
+
+section.at-inner .at-fieldset.ContactInformation .at-fields label,
+section.at-inner .at-fieldset.PaymentInformation .at-fields label {
+	color: var(--black);
+	font-size: 16px;
+	line-height: 20px;
+}
+
+section.at-inner .at-fieldset.ContactInformation .at-fields input:last-child,
+section.at-inner .at-fieldset.PaymentInformation .at-fields input:last-child,
+section.at-inner .at-fieldset.PaymentInformation .at-fields .vgs-input-container iframe:last-child {
+  border-color: var(--dark-grey);
+	margin: 0 0 18px 0;
+}
+
+section.at-inner .at-fieldset.PaymentInformation .at-row {
+	flex-wrap: unset;
+	flex-flow: unset;
+}
+
+section.at-inner .at-fieldset.PaymentInformation .at-row .at-cc-number {
+	flex-basis: 50%;
+}
+
+/* Additional Info */
+
+section.at-inner .at-fieldset.AdditionalInformation {
+  line-height: 20px;
+	padding: 0 10px;
+}
+
+section.at-inner .at-fieldset.AdditionalInformation legend.at-legend {
+	display: none;
+}
+
+section.at-inner .at-fieldset.AdditionalInformation .fas.fa-lock {
+  margin-right: 8px;
+}
+
+section.at-inner .at-fieldset.AdditionalInformation p:nth-child(2) {
+  margin-top: 8px;
+}
+
+/* Form Control Buttons */
+
+.at-form-submit {
+  flex-wrap:wrap;
+  margin:20px 10px 30px;
+  /* margin-right: 10px; */
+  padding:0 10px;
+}
+
+.at-form-submit .step-prevNext {
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0 0;
+  width:100%;
+}
+
+.at-form-submit .step-prevNext .prevNext {
+  padding:0 14px;
+  width:50%;
+}
+
+.at-form-submit .step-prevNext:before,
+.at-form-submit .step-prevNext:after {display:none;}
+.at-form-submit .step-prevNext .next {order:2;}
+.at-form-submit .step-prevNext .prev {order:1;}
+
+.at-form-submit .at-submit,
+.at-form-submit .step-prevNext .btn-at,
+.at-submit.btn-at.btn-at-primary {
+  align-items:center;
+  background:var(--red);
+  border:0;
+  border-radius:6px;
+  color:#fff !important;
+  display:flex;
+  font-family: var(--primary-font);
+  font-size:20px;
+  font-weight:500;
+  height:53px;
+  justify-content:center;
+  line-height:22px;
+  margin:0px;
+  padding:15.5px 30px;
+  text-decoration:none;
+  text-transform:uppercase;
+  width: 100%;
+} 
+
+.at-submit.btn-at.btn-at-primary {
+  margin-top: 10px;
+}
+
+.at-submit.btn-at.btn-at-primary:hover {
+  background-color: var(--plum);
+}
+
+.at-form-submit .step-prevNext .btn-at {
+  border-radius:6px;
+  font-weight:400;
+  letter-spacing:unset;
+  text-transform:none;
+  width:100%;
+}
+
+.at-form-submit .step-prevNext .prev .btn-at,
+.at-form-submit .back-link.at-submit {
+  background:var(--red);
+  color:var(--red);
+}
+
+.at-form-submit .back-link.at-submit {order:1;}
+
+/* Footer */
+
+footer.theme-footer {
+  background: var(--light-grey);
+  font-family: var(--secondary-font);
+}
+
+section.footer-container {
+  padding: 58px 32px;
+}
+
+footer.theme-footer .share-icons {
+  margin-bottom: 26px;
+}
+
+footer.theme-footer .share-icons a.fa-brands,
+footer.theme-footer .share-icons a.fab,
+footer.theme-footer .share-icons a.fa-brands::before,
+footer.theme-footer .share-icons a.fab::before {
+  color: var(--black);
+  display: inline-block;
+  font-size: 35px;
+  height: 35px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 35px;
+}
+
+footer.theme-footer .address {
+  margin-bottom: 20px;
+}
+
+footer.theme-footer .phone {
+  margin-bottom: 40px;
+}
+
+footer.theme-footer .blurb {
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+footer.theme-footer .link a {
+  color: var(--red);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+footer.theme-footer .link .fa-chevron-circle-right {
+  margin-left: 4px;
+}
+
+@media (max-width: 767px) {
+	
+	fieldset.ContributionInformation label.label-amount {
+		margin-right: 0;
+	}
+	
+}
+
+@media (min-width: 768px) {
+  
+  /* Header */
+  
+  header.theme-header {
+    height: 140px;
+    justify-content: flex-start;
+  }
+  
+  figure.branding {
+    padding: 32.5px 30px;
+    width: 340px;
+  }
+  
+  /* Form */
+  
+  main.theme-content .form-container {
+    background: #FFF;
+    border: 1px solid var(--light-grey);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 80px auto 100px;
+    width: 600px;
+  }
+  
+  /* Contribution Buttons */
+  
+  fieldset.ContributionInformation label.label-amount {
+    margin-bottom: 16px;
+    margin-right: 16px;
+  }
+  
+  fieldset.ContributionInformation label.label-amount:nth-child(4n+4) {
+    margin-right: 16px;
+  }
+  
+  fieldset.ContributionInformation label.label-amount {
+    width: calc(50% - 20px) !important;
+  }
+  
+  /* Submit */
+  
+  .at-form-submit .at-submit, 
+  .at-form-submit .step-prevNext .btn-at, 
+  .at-submit.btn-at.btn-at-primary {
+    padding: 12px 32px;
+    width: 184px;
+  }
+  
+  /* Footer */
+  
+  section.footer-container { 
+    max-width: 1001px;
+  }
+  
+  section.footer-container .contact {
+    width: 500px;
+  }
+  
+}
+
+@media (min-width: 900px) {
+  
+  section.footer-container {
+    display: flex;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  
+  /* Form */
+  
+  figure.branding {
+    padding: 32.5px 120px;
+  }
+  
+  main.theme-content .form-container {
+    width: 700px;
+  }
+  
+  /* Contribution Buttons */
+  
+  fieldset.ContributionInformation label.label-amount {
+    width: calc((100% / 3) - 20px) !important;
+  }
+  
+}
+
+@media (min-width: 1440px) {
+  
+  /* Form */
+  
+  main.theme-content .form-container {
+    width: 840px;
+  }
+  
+}
+
+
